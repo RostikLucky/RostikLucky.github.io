@@ -2,8 +2,19 @@
   <head>
     <title>RostikLucky</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
   </head>
   <body>
-    test app
+    <button onclick="show()"></button>
+  <script>
+    const AdController = window.Adsgram.init({ blockId: "816" });
+    function show() {
+      AdController.show().then((result) => {
+          console.log(result)
+      }).catch((result) => {
+           console.log(result)
+      })
+    }
+  </script>
   </body>
 </html>
